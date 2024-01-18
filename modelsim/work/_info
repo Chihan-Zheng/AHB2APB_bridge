@@ -1,0 +1,110 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Digital_IC/Course_Designs/ahb2apb_bridge/my_codes/modelsim
+vahb2apb_bridge
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 bSQk4[=nXFe1k6Oo05RH31
+Im<VY7:;:TzZKP1I=<hfOE3
+R0
+w1693338276
+8../rtl/ahb2apb_bridge.v
+F../rtl/ahb2apb_bridge.v
+L0 5
+Z2 OL;L;10.4c;61
+Z3 !s108 1693338288.000000
+Z4 !s107 ../rtl/ahb2apb_bridge.v|../pattern/apb_sram.v|../pattern/spram_generic_wbe4.v|../pattern/ahb_lite_ms_model.v|../pattern/tb.v|
+Z5 !s90 -reportprogress|300|-O0|-vlog01compat|-f|flist.f|
+!s101 -O0
+!i113 0
+Z6 o-O0 -vlog01compat -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vahb_lite_ms_model
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 nl[iVUCzmhEPHBDXf;FIL0
+I2aeWUzObE1_zgljd2DGUC1
+R0
+w1693337986
+8../pattern/ahb_lite_ms_model.v
+F../pattern/ahb_lite_ms_model.v
+L0 13
+R2
+R3
+R4
+R5
+!s101 -O0
+!i113 0
+R6
+vapb_sram
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 3Eb@XPkc;jjXmL=m78K0e3
+I4`6?a[`6QO=hU4HifH_j31
+R0
+w1693338268
+8../pattern/apb_sram.v
+F../pattern/apb_sram.v
+L0 4
+R2
+R3
+R4
+R5
+!s101 -O0
+!i113 0
+R6
+vspram_generic_wbe4
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 7VLSmdg=dM<J=2a:U<_WG0
+Ib]o^HRVLIZf_]elX^^j@a3
+R0
+w1693318245
+8../pattern/spram_generic_wbe4.v
+F../pattern/spram_generic_wbe4.v
+L0 5
+R2
+R3
+R4
+R5
+!s101 -O0
+!i113 0
+R6
+vtb
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 7Xda<4D6RgWKU8eiYb;cC1
+IEeoUoe^[jQB6iK:;G5ehF0
+R0
+w1693337993
+8../pattern/tb.v
+F../pattern/tb.v
+L0 6
+R2
+R3
+R4
+R5
+!s101 -O0
+!i113 0
+R6
