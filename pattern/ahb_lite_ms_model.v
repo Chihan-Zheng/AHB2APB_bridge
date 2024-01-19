@@ -402,7 +402,7 @@ always @(posedge clk or negedge rstn) begin
     end else begin
         bus_rd_d <= #1 bus_rd;
         if (hready) begin
-            haddr_d <= #1 haddr_i;
+            haddr_d <= #1 haddr_i;      //delay 1T for read check, because current addr is next addr, so should store previous addr
         end
     end
 end
@@ -486,9 +486,9 @@ end
 always @(posedge clk or negedge rstn) begin
     if (!rstn) begin
     `ifdef EN_BACK2BACK  //whether one operation is following another one 
-    end else if (bus_fir_beat_d && bus_rd_d) begin
+    end else if (bus_fir_beat_d && bus_rd_d) begin      //check at the first rd finished
     `else
-    end else if (bus_fir_beat_d) begin
+    end else if (bus_fir_beat_d) begin                  //check at the first cmd trans of next op finished 
      `endif
         mem_content_chk;
     end
@@ -553,7 +553,7 @@ initial begin
     end
     
     ahb_rd_burst;
-    ahb_wr_burst;
+    ahb_wr_burst;       //mem chk will starts at next burst if no back2back; otherwise will start at next rd burst
     $display("t0 test pass.");
 
     //--- t1: addr = max, r/w
@@ -613,7 +613,8 @@ initial begin
         end
     end
 
-    ahb_rd_burst;  //check only happens during the beginning of read process
+    ahb_rd_burst;  //rd check doesn't happens during the beginning of read process if last op is wr burst
+                   //mem chk only happens at the end of the first cmd trans of the rd burst
     repeat(20) @(posedge clk);
     $display("sim pass!");
     $finish();

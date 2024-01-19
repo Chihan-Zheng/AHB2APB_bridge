@@ -40,7 +40,7 @@ always @(posedge clk) begin
 end
 
 //--- write
-//In order to adjust for master's BUSY, this apb_slave need 3T to write data
+//In order to adjust for master's BUSY, this apb_slave need 3T to write data (after busy, should also take 2 cycles to finish trans like normal trans)
 assign apb_write_w = pwrite & psel &(!penable);
 
 always @(posedge clk or negedge rstn) begin
